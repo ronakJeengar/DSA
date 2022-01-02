@@ -12,12 +12,24 @@ public class FindDuplicateInArray {
 //                if(arr[i] == arr[j]) return arr[i];
 //            }
 //        }
-        //Using Arrays.sort method
-        Arrays.sort(arr);
-        for(int i =0 ; i < size; i++){
-            if(arr[i] == arr[i+1]) return arr[i];
+        //Using Arrays.sort method for O(nlogn) complexity
+//        Arrays.sort(arr);
+//        for(int i =0 ; i < size; i++){
+//            if(arr[i] == arr[i+1]) return arr[i];
+//        }
+//        return -1;
+
+        //Using XOR operator for O(n) complexity
+
+        int ans = 0;
+
+        for(int i = 0; i < size; i++){
+            ans ^= arr[i];
         }
-        return -1;
+        for(int i = 1; i < size; i++){
+            ans ^= i;
+        }
+        return ans;
     }
 
     public static void main(String[] args){
@@ -28,5 +40,4 @@ public class FindDuplicateInArray {
         int ans = findDuplicate(arr, size);
         System.out.println(ans);
     }
-
 }
