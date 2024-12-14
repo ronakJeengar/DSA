@@ -2,6 +2,7 @@ package com.ronak.arrays;
 
 public class ReverseArray {
 
+    // Two Pointer Approach
     static void reverseArray(int[] arr, int n) {
 
         int start = 0;
