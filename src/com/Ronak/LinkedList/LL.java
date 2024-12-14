@@ -1,29 +1,29 @@
-package com.Ronak.LinkedList;
+package com.ronak.LinkedList;
 
-public class LL{
+public class LL {
 
     Node head;
     int size;
 
-    public LL(){
+    public LL() {
         size = 0;
     }
 
-    class Node{
+    class Node {
 
         int data;
         Node next;
 
-        public Node(int data){
+        public Node(int data) {
             this.data = data;
             this.next = null;
             size++;
         }
     }
 
-    public void insertFirst(int data){
+    public void insertFirst(int data) {
         Node newNode = new Node(data);
-        if(head == null){
+        if (head == null) {
             head = newNode;
             return;
         }
@@ -31,18 +31,18 @@ public class LL{
         head = newNode;
     }
 
-    public void insertLast(int data){
+    public void insertLast(int data) {
         Node newNode = new Node(data);
 
         Node temp = head;
-        while(temp.next != null){
+        while (temp.next != null) {
             temp = temp.next;
         }
         temp.next = newNode;
     }
 
-    public void deleteFirst(){
-        if(head == null){
+    public void deleteFirst() {
+        if (head == null) {
             System.out.println("list is empty");
             return;
         }
@@ -50,27 +50,27 @@ public class LL{
         head = head.next;
     }
 
-    public void printlist(){
-        if(head == null){
+    public void printlist() {
+        if (head == null) {
             System.out.println("list is empty");
             return;
         }
         Node temp = head;
-        while(temp != null){
+        while (temp != null) {
             System.out.print(temp.data + " -> ");
             temp = temp.next;
         }
         System.out.print("null\n");
     }
 
-    public void deleteLast(){
+    public void deleteLast() {
 
-        if(head == null){
+        if (head == null) {
             System.out.println("list is empty");
             return;
         }
         size--;
-        if(head.next == null){
+        if (head.next == null) {
             head = null;
             return;
         }
@@ -78,14 +78,14 @@ public class LL{
         Node secondLast = head;
         Node last = head.next;
 
-        while(last.next != null){
+        while (last.next != null) {
             last = last.next;
             secondLast = secondLast.next;
         }
         secondLast.next = null;
     }
 
-    public void getSize(){
+    public void getSize() {
         System.out.println(size);
     }
 }

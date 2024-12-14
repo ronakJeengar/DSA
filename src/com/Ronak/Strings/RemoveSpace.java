@@ -1,4 +1,4 @@
-package com.Ronak.Strings;
+package com.ronak.Strings;
 
 public class RemoveSpace {
 

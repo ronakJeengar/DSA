@@ -1,11 +1,13 @@
-package com.Ronak.ArrayList;
+package com.ronak.ArrayList;
+
 import java.util.*;
+
 public class ArrayListIntro {
 
     public static void main(String[] args) {
 
         ArrayList<Integer> list = new ArrayList<>();
-        //Add element in list
+        // Add element in list
 
         list.add(12);
         list.add(24);

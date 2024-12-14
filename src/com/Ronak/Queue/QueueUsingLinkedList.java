@@ -1,10 +1,10 @@
-package com.Ronak.Queue;
+package com.ronak.Queue;
 
 import java.util.*;
 
 public class QueueUsingLinkedList {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         Queue<Integer> queue = new LinkedList<>();
 
@@ -19,11 +19,9 @@ public class QueueUsingLinkedList {
         System.out.println(queue.remove());
         System.out.println(queue.element());
         System.out.println(queue.remove());
-        //check the next element for remove
+        // check the next element for remove
         System.out.println(queue.element());
-
 
     }
 
 }
-

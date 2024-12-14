@@ -1,6 +1,5 @@
-package com.Ronak.Sorting;
+package com.ronak.Sorting;
 
 public class InsertionSort {
-
 
 }

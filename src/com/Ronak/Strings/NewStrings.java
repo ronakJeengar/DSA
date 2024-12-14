@@ -1,4 +1,4 @@
-package com.Ronak.Strings;
+package com.ronak.Strings;
 
 public class NewStrings {
 
@@ -16,4 +16,3 @@ public class NewStrings {
     }
 
 }
-

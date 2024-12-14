@@ -1,4 +1,4 @@
-package com.Ronak.Strings;
+package com.ronak.Strings;
 
 public class Performance {
 
@@ -7,10 +7,9 @@ public class Performance {
         String series = " ";
         for (int i = 0; i < 26; i++) {
             char ch = (char) ('a' + i);
-            //System.out.print(ch+" ");
+            // System.out.print(ch+" ");
             series += ch;
         }
         System.out.println(series);
     }
 }
-

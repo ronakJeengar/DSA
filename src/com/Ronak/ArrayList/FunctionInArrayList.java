@@ -1,5 +1,7 @@
-package com.Ronak.ArrayList;
-import java.util.*;
+package com.ronak.ArrayList;
+
+// import java.util
+
 public class FunctionInArrayList {
 
     public static void main(String[] args) {
