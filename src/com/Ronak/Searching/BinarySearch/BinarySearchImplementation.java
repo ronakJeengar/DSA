@@ -1,4 +1,4 @@
-package com.ronak.Searching.BinarySearch;
+package com.ronak.searching.BinarySearch;
 
 public class BinarySearchImplementation {
 

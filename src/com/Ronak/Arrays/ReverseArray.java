@@ -1,4 +1,4 @@
-package com.ronak.Arrays;
+package com.ronak.arrays;
 
 public class ReverseArray {
 

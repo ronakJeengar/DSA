@@ -1,4 +1,4 @@
-package com.ronak.ArrayList;
+package com.ronak.arraylists;
 
 import java.util.*;
 

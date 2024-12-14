@@ -1,4 +1,4 @@
-package com.ronak.Sorting;
+package com.ronak.sorting;
 
 public class InsertionSort {
 
