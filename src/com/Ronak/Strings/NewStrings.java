@@ -9,7 +9,7 @@ public class NewStrings {
 
         System.out.println(a);
         System.out.println(b);
-        System.out.println(a == b);
+        System.out.println(a.equals(b));
 
         System.out.println(a.equals(b));
 

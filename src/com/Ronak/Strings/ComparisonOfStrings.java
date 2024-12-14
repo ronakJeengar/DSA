@@ -7,7 +7,7 @@ public class ComparisonOfStrings {
         String a = new String("Ronak");
         String b = new String("Ronak");
 
-        if (a == b) {
+        if (a.equals(b)) {
             System.out.println("It is same");
         } else {
             System.out.println("It is not same");
