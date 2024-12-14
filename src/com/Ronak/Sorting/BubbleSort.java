@@ -27,7 +27,10 @@ public class BubbleSort {
         int[] arr = { 5, 3, 9, 6, 4, 1, 8, 2, 7 };
         int n = arr.length;
 
-        int[] ans = bubbleSort(arr, n);
         printArray(arr);
+
+        int[] ans = bubbleSort(arr, n);
+        printArray(ans);
+
     }
 }
