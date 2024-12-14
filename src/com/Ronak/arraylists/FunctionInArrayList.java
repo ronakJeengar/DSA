@@ -2,8 +2,6 @@ package com.ronak.arraylists;
 
 import java.util.ArrayList;
 
-import java.util.*;
-
 public class FunctionInArrayList {
 
     public static void main(String[] args) {

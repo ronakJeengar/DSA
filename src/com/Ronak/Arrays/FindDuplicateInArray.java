@@ -7,19 +7,6 @@ public class FindDuplicateInArray {
     // Using XOR operator for O(n) complexity
     static int findDuplicateUsingXor(int[] arr, int size) {
 
-        // if(arr.length == 0) return -1;
-        // for(int i = 0; i < size; i++){
-        // for(int j = i+1; j < size; j++){
-        // if(arr[i] == arr[j]) return arr[i];
-        // }
-        // }
-        // Using Arrays.sort method for O(nlogn) complexity
-        // Arrays.sort(arr);
-        // for(int i =0 ; i < size; i++){
-        // if(arr[i] == arr[i+1]) return arr[i];
-        // }
-        // return -1;
-
         int ans = 0;
 
         for (int i = 0; i < size; i++) {
@@ -33,13 +20,6 @@ public class FindDuplicateInArray {
 
     // Using Arrays.sort method for O(nlogn) complexity
     static int findDuplicateUsingArraySort(int[] arr, int size) {
-
-        // if(arr.length == 0) return -1;
-        // for(int i = 0; i < size; i++){
-        // for(int j = i+1; j < size; j++){
-        // if(arr[i] == arr[j]) return arr[i];
-        // }
-        // }
         Arrays.sort(arr);
         for (int i = 0; i < size; i++) {
             if (arr[i] == arr[i + 1])
