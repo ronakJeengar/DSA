@@ -28,12 +28,11 @@ public class SortColors {
         int oneCount = 0;
         int twoCount = 0;
         for (int num : nums) {
-            if (num == 0)
-                zeroCount++;
-            else if (num == 1)
-                oneCount++;
-            else
-                twoCount++;
+            switch (num) {
+                case 0 -> zeroCount++;
+                case 1 -> oneCount++;
+                default -> twoCount++;
+            }
         }
 
         int index = 0;
@@ -52,16 +51,18 @@ public class SortColors {
         int high = nums.length - 1;
 
         while (mid <= high) {
-            if (nums[mid] == 0) {
-                int temp = nums[low];
-                nums[low++] = nums[mid];
-                nums[mid++] = temp;
-            } else if (nums[mid] == 1) {
-                mid++;
-            } else {
-                int temp = nums[mid];
-                nums[mid] = nums[high];
-                nums[high--] = temp;
+            switch (nums[mid]) {
+                case 0 ->                     {
+                        int temp = nums[low];
+                        nums[low++] = nums[mid];
+                        nums[mid++] = temp;
+                    }
+                case 1 -> mid++;
+                default ->                     {
+                        int temp = nums[mid];
+                        nums[mid] = nums[high];
+                        nums[high--] = temp;
+                    }
             }
         }
     }
