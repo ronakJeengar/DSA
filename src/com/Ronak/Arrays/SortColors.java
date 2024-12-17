@@ -14,6 +14,7 @@ public class SortColors {
 
     }
 
+    // print array method
     static void printArray(int[] nums) {
 
         for (int num : nums) {
