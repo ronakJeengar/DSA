@@ -2,29 +2,46 @@ package com.ronak.arrays;
 
 public class FindMinMax {
 
-    static void minArray(int[] arr, int n) {
-        int min = arr[0];
-        for (int i = 0; i < n; i++) {
-            min = Integer.min(arr[i], min);
-        }
-        System.out.println(min);
-    }
-
-    static void maxArray(int[] arr, int n) {
-        int max = arr[0];
-
-        for (int i = 0; i < n; i++) {
-            max = Integer.max(arr[i], max);
-        }
-        System.out.println(max);
-    }
-
     public static void main(String[] args) {
 
-        int[] arr = { 4, 5, 7, 8, 9 };
-        int n = arr.length;
+        int[] arr = {3, 5, 1, 9, 2};
 
-        minArray(arr, n);
-        maxArray(arr, n);
+        int[] ans = findMinMaxBruteForce(arr);
+
+        for(int num : ans){
+            System.out.print(num + "");
+        }
+
+        int[] result = findMinMaxOptimize(arr, 0, arr.length - 1);
+
+        for(int num : result){
+            System.out.print(num + "");
+        }
+
+    }
+
+    static int[] findMinMaxBruteForce(int[] arr){
+        int max = arr[0];
+        int  min = arr[0];
+        for (int num : arr) {
+            if (num > max) max = num;
+            if (num < min) min = num;
+        }
+
+        return new int[]{min, max};
+    }
+
+    static int[] findMinMaxOptimize(int[] arr, int low, int high) {
+    if (low == high) return new int[]{arr[low], arr[low]};
+
+    int mid = (low + high) / 2;
+
+    int[] left = findMinMaxOptimize(arr, low, mid); 
+    int[] right = findMinMaxOptimize(arr, mid + 1, high);
+
+        return new int[]{
+            Math.min(left[0], right[0]), // Minimum of the two halves
+            Math.max(left[1], right[1])  // Maximum of the two halves
+        };
     }
 }
