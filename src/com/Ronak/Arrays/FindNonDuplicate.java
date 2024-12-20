@@ -1,6 +1,6 @@
 package com.ronak.arrays;
 
-public class UniqueElement {
+public class FindNonDuplicate {
 
     // Using Xor Operator
     static int findUnique(int[] arr, int n) {
