@@ -11,7 +11,6 @@ public class SortColors {
         printArray(arr);
         sortColorsBruteForce(arr1);
         printArray(arr1);
-
     }
 
     // print array method

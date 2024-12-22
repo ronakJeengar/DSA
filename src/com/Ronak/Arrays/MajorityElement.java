@@ -9,19 +9,18 @@ public class MajorityElement {
 
         System.out.println("Majority Element: " + result);
         System.out.println("Majority Element: " + result1);
-
     }
 
     // find majority element using brute force
     public static int findMajorityBruteForce(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
+        for (int k : arr) {
             int count = 0;
-            for (int j = 0; j < arr.length; j++) {
-                if (arr[j] == arr[i])
+            for (int i : arr) {
+                if (i == k)
                     count++;
             }
             if (count > arr.length / 2)
-                return arr[i];
+                return k;
         }
         return -1;
     }

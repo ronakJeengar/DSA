@@ -19,5 +19,4 @@ public class FindNonDuplicate {
         int uniqueIs = findUnique(nums, size);
         System.out.println(uniqueIs);
     }
-
 }

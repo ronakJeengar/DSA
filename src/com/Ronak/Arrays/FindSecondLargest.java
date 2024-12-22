@@ -21,11 +21,11 @@ public class FindSecondLargest {
         if (n < 2)
             return -1;
 
-        for (int i = 0; i < n; i++) {
+        for (int j : arr) {
 
-            if (arr[i] > first) {
+            if (j > first) {
                 second = first;
-                first = arr[i];
+                first = j;
             }
 
         }

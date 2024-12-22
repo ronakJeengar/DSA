@@ -5,7 +5,6 @@ public class ArrayIntro {
     public static void main(String[] args) {
 
         // Array Declaration Type
-
         // Give size then give value to index
         int[] arr = new int[5];
         arr[0] = 1;
@@ -17,9 +16,7 @@ public class ArrayIntro {
         printArray(arr); // print {1,2,3,4,5}
 
         // Give direct values
-
         int[] arr1 = { 1, 2, 3, 4, 5 };
-
         printArray(arr1); // print {1,2,3,4,5}
 
     }

@@ -34,7 +34,7 @@ public class FindMinMax {
         return new int[]{min, max};
     }
 
-    //using divide and conqure approach
+    //using divide and conquer approach
     static int[] findMinMaxOptimize(int[] arr, int low, int high) {
     if (low == high) return new int[]{arr[low], arr[low]};
 
