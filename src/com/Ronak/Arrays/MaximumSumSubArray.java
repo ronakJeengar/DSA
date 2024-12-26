@@ -6,15 +6,15 @@ public class MaximumSumSubArray {
 
         int[] arr = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
 
-        int ans = maxSubarraySumBruteForce(arr);
-        int ans1 = maxSubarraySumKadane(arr);
+        int ans = maxSubArraySumBruteForce(arr);
+        int ans1 = maxSubArraySumKadane(arr);
 
         System.out.println(ans);
         System.out.println(ans1);
 
     }
 
-    public static int maxSubarraySumBruteForce(int[] arr) {
+    public static int maxSubArraySumBruteForce(int[] arr) {
         int maxSum = Integer.MIN_VALUE;
 
         for (int i = 0; i < arr.length; i++) {
@@ -28,7 +28,7 @@ public class MaximumSumSubArray {
         return maxSum;
     }
 
-    public static int maxSubarraySumKadane(int[] arr) {
+    public static int maxSubArraySumKadane(int[] arr) {
         int maxSum = Integer.MIN_VALUE;
         int currentSum = 0;
 
