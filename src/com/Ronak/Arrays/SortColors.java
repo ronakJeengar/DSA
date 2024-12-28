@@ -43,7 +43,7 @@ public class SortColors {
             nums[index++] = 2;
     }
 
-    // sort the colors using duch-national flag algorithm
+    // sort the colors using dutch-national flag algorithm
     public static void sortColorsOptimized(int[] nums) {
         int low = 0;
         int mid = 0;
@@ -65,5 +65,4 @@ public class SortColors {
             }
         }
     }
-
 }

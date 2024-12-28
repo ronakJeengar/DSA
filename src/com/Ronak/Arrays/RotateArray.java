@@ -14,6 +14,30 @@ public class RotateArray {
         }
     }
 
+    public static void rotateUsingBruteForceTwo(int[] nums, int k) {
+        int size = nums.length;
+        k = k % size;
+
+        if (k == 0) return;
+
+        int[] temp = new int[k];
+        int index = 0;
+
+        for (int i = size - k; i < size; i++) {
+            temp[index++] = nums[i];
+        }
+
+        for (int i = size - 1; i >= k; i--) {
+            nums[i] = nums[i - k];
+        }
+
+        System.arraycopy(temp, 0, nums, 0, k);
+
+        for (int num : nums) {
+            System.out.print(num + " ");
+        }
+    }
+
     public static void rotateUsingOptimized(int[] nums, int k) {
         k = k % nums.length;
         reverse(nums, 0, nums.length - 1);
@@ -38,9 +62,9 @@ public class RotateArray {
     public static void main(String[] args) {
         int[] nums = {1, 2, 3, 4, 5, 6, 7};
         rotateUsingBruteForce(nums, 3);
+        rotateUsingBruteForceTwo(nums, 3);
         rotateUsingOptimized(nums, 3);
         
         printArray(nums);
     }
-    
 }
