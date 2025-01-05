@@ -6,12 +6,12 @@ public class FindSecondLargest {
 
         int[] arr = { 15, 15, 15, 15 };
 
-        int ans = findSecondLarget(arr);
+        int ans = findSecondLargest(arr);
 
-        System.out.print("second largetest is " + ans);
+        System.out.print("second largest is " + ans);
     }
 
-    static int findSecondLarget(int[] arr) {
+    static int findSecondLargest(int[] arr) {
 
         int n = arr.length;
 

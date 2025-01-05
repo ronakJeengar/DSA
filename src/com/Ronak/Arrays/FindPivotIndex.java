@@ -17,16 +17,15 @@ public class FindPivotIndex {
                 leftSum += nums[j];
             }
 
-            // Calculate right sum
             for (int j = i + 1; j < nums.length; j++) {
                 rightSum += nums[j];
             }
 
             if (leftSum == rightSum) {
-                return i; // Return pivot index if sums are equal
+                return i;
             }
         }
-        return -1; // No pivot index found
+        return -1;
     }
 
     static int findPivotIndexOptimized(int[] nums) {
