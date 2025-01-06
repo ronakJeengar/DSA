@@ -8,8 +8,8 @@ public class SortZerosOnes {
 
         int[] arr = {1, 0, 1, 0, 0, 1, 1, 0, 0, 1};
 
-        sortZerosOnesBruteForce(arr);
-        sortZerosOnesOptimized(arr);
+//        sortZerosOnesBruteForce(arr);
+//        sortZerosOnesOptimized(arr);
         sortZerosOnesUsingTwoPointer(arr);
     }
 
@@ -44,7 +44,7 @@ public class SortZerosOnes {
         int start = 0;
         int end = arr.length - 1;
 
-        while (start < end) {
+        while (start <= end) {
             if (arr[start] == 1 && arr[end] == 0) {
                 // Place 0 and 1 directly and update pointers
                 arr[start++] = 0;
