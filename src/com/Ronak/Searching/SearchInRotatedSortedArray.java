@@ -23,10 +23,9 @@ public class SearchInRotatedSortedArray {
 
     public static int binarySearching(int[] arr, int start, int end, int target) {
 
-        int mid = start + (end - start) / 2;
 
         while (start <= end) {
-            mid = start + (end - start) / 2;
+            int mid = start + (end - start) / 2;
 
             if (arr[mid] > target) {
                 end = mid - 1;
@@ -42,10 +41,9 @@ public class SearchInRotatedSortedArray {
     public static int getPivotIndex(int[] arr) {
         int s = 0;
         int e = arr.length - 1;
-        int mid = s + (e - s) / 2;
 
         while (s <= e) {
-            mid = s + (e - s) / 2;
+            int mid = s + (e - s) / 2;
 
             //for single element the element itself is pivot
             if (s == e) return s;
