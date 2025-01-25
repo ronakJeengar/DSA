@@ -17,6 +17,7 @@ public class FindPivotIndex {
                 leftSum += nums[j];
             }
 
+            // Calculate right sum
             for (int j = i + 1; j < nums.length; j++) {
                 rightSum += nums[j];
             }

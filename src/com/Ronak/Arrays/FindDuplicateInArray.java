@@ -20,6 +20,8 @@ public class FindDuplicateInArray {
 
     // Using Arrays.sort method for O(nlogn) complexity
     static int findDuplicateUsingArraySort(int[] arr, int size) {
+        if (arr == null || size < 2) return -1;
+
         Arrays.sort(arr);
         for (int i = 0; i < size; i++) {
             if (arr[i] == arr[i + 1])
@@ -33,10 +35,11 @@ public class FindDuplicateInArray {
 
         if (arr.length == 0)
             return -1;
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < size - 1; i++) {
             for (int j = i + 1; j < size; j++) {
-                if (arr[i] == arr[j])
+                if (arr[i] == arr[j]) {
                     return arr[i];
+                }
             }
         }
         return -1;
@@ -44,7 +47,7 @@ public class FindDuplicateInArray {
 
     public static void main(String[] args) {
 
-        int[] arr = { 1, 2, 2, 3, 4 };
+        int[] arr = {1, 2, 2, 3, 4};
         int size = arr.length;
 
         int ans = findDuplicateUsingXor(arr, size);
