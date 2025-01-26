@@ -5,9 +5,8 @@ public class FindSquareRoot {
     public static void main(String[] args) {
         int x = 50;
         double result = findSquareRoot(x, 2);
-        // Format the result to 2 decimal places
-//        System.out.printf("Square root of %d with precision is: %.2f%n", x, result);
         System.out.println("Square root of : " + x + " is " + result);
+        System.out.printf("Square root of %d with precision is: %.2f%n", x, findSquareRootWithPrecisionUsingBS(x));
     }
 
     public static int findSquareRootIntegerPart(int number) {
@@ -31,21 +30,31 @@ public class FindSquareRoot {
 
     public static double findSquareRoot(int number, int precision) {
         double result = findSquareRootIntegerPart(number);
-        System.out.println("first result is : " +result);
         double increment = 0.1;
-        System.out.println("first increment is : " +increment);
         for (int i = 0; i < precision; i++) {
-            System.out.println("current result in iteration ( "+ (i + 1)+ " ) : " +result);
             while (result * result <= number) {
                 result += increment;
-                System.out.println("loop result is ( "+ (i + 1)+ " ) : " +result);
             }
             result -= increment;
-            System.out.println("second result is : " +result);
             increment /= 10;
-            System.out.println("second increment is : " +increment);
         }
         result = Math.round(result * Math.pow(10, precision)) / Math.pow(10, precision);
         return result;
+    }
+
+    public static double findSquareRootWithPrecisionUsingBS(int number) {
+        double start = 0;
+        double end = number;
+        double ans = 0;
+        while ((end - start) > 0.000000001) {
+            double mid = (start + end) / 2;
+            double sqr = mid * mid;
+            if (sqr <= number) {
+                ans = mid;
+                start = mid + 0.000000000000000000000000001;
+            } else
+                end = mid - 0.000000000000000000000000001;
+        }
+        return ans;
     }
 }
