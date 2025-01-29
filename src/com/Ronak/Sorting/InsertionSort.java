@@ -11,9 +11,7 @@ public class InsertionSort {
                 arr[j + 1] = arr[j];
                 j--;
             }
-            arr[j + 1] = key;
-
-            System.out.println("Step " + i + ": " + java.util.Arrays.toString(arr));
+            arr[j+1] = key;
         }
     }
 

@@ -11,11 +11,9 @@ public class SelectionSort {
                 }
             }
 
-            int temp = arr[minIndex];
-            arr[minIndex] = arr[i];
-            arr[i] = temp;
-
-            System.out.println("Step " + (i + 1) + ": " + java.util.Arrays.toString(arr));
+            int temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
         }
     }
 
