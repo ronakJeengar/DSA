@@ -1,4 +1,5 @@
 package com.ronak.strings;
+
 import java.util.Scanner;
 
 public class CharArrayOperations {
@@ -45,7 +46,7 @@ public class CharArrayOperations {
     // Reverse character array manually
     public static void reverseCharArray(char[] arr) {
         int left = 0, right = getLength(arr) - 1;
-        while (left < right) {
+        while (left <= right) {
             char temp = arr[left];
             arr[left++] = arr[right];
             arr[right--] = temp;
@@ -72,6 +73,23 @@ public class CharArrayOperations {
         System.out.println("Enter first input:");
         String input1 = scanner.nextLine();
         char[] arr1 = input1.toCharArray();
+        System.out.println("size is : " + getLength(arr1));
+
+        char[] arr = new char[100];
+
+        for (int i = 0; i < 5; i++) {
+            arr[i] = scanner.next().charAt(0);
+        }
+
+        for(int i = 0; i < 5; i++){
+            System.out.print(arr[i] + " ");
+        }
+
+        System.out.println();
+
+        int count = getLength(arr);
+
+        System.out.println("count is " + count);
 
         System.out.println("Enter second input:");
         String input2 = scanner.nextLine();
@@ -106,8 +124,8 @@ public class CharArrayOperations {
         System.out.println("Reversed (Manual): " + new String(arr2));
 
         // ✅ Reverse using built-in method
-        System.out.println("Reversed (Built-in): " + new StringBuilder(input1).reverse().toString());
-        System.out.println("Reversed (Built-in): " + new StringBuilder(input2).reverse().toString());
+        System.out.println("Reversed (Built-in): " + new StringBuilder(input1).reverse());
+        System.out.println("Reversed (Built-in): " + new StringBuilder(input2).reverse());
 
         // ✅ Replace character manually
         replaceCharacter(arr1, '@', ' ');

@@ -51,7 +51,7 @@ public class StringOperations {
 
         System.out.println();
 
-        for (int i = 0; i < nameIter.length(); i++) {
+        for (int i = 0, len = nameIter.length(); i < len; i++) {
             System.out.print(nameIter.charAt(i) + " ");
         }
 
