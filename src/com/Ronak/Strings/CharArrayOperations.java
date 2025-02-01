@@ -56,7 +56,7 @@ public class CharArrayOperations {
     // Check if the character array is a palindrome manually
     public static boolean checkPalindrome(char[] arr) {
         int left = 0, right = getLength(arr) - 1;
-        while (left < right) {
+        while (left <= right) {
             if (arr[left] != arr[right]) {
                 return false;
             }
