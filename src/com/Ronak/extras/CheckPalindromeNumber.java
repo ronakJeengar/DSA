@@ -5,8 +5,7 @@ public class CheckPalindromeNumber {
     public static void main(String[] args) {
 
         int number = 121;
-        System.out.println(number + " is palindrome or not : " + checkNumberPalindrome(number))
-        ;
+        System.out.println(number + " is palindrome or not : " + checkNumberPalindrome(number));
     }
 
     static boolean checkNumberPalindrome(int number) {
