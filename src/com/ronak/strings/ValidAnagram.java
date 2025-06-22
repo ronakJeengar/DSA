@@ -26,7 +26,7 @@ public class ValidAnagram {
 
     public static void main(String[] args) {
         System.out.println(areAnagrams("anagram", "nagaram")); // true
-//        System.out.println(areAnagrams("rat", "car"));         // false
+        System.out.println(areAnagrams("rat", "car"));         // false
     }
 
 }
