@@ -1,4 +1,4 @@
-package com.ronak.linkedlist;
+package com.ronak.linkedList;
 
 public class LL1 {
 
